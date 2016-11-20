@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            function counter(){			
+				var count = 0;				
+				return function(){
+					return ++count;
+				};		
+			};			
+			var incrementCounter = counter();
+			
+			function onButtonClick(){			
+				var count = incrementCounter();				
+				document.getElementById('clickcount').innerHTML = "You clicked " + count + " time(s) ..!";
+			}
+	   </script>
+    </head>
+    <body>
+    <h1>Lets create a counter using closure</h1>
+    <button onclick="onButtonClick();">Click Me</button>
+    <h1 id="clickcount">You clicked 0 time(s) ..!</h1>
+    </body>
+</html>

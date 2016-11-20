@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            function outerFuntion(innerFunction){
+                innerFunction();
+            }
+            outerFuntion(function(){
+                console.log("Hello World from Inner Function")
+            });
+        </script>
+    </head>
+    <body>
+        <p>This is an axample for Function as Arguments</p>
+    </body>
+</html>
